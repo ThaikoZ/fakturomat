@@ -1,59 +1,62 @@
-Oczywiście, oto poprawiona wersja README dla aplikacji do zarządzania fakturowaniem, gdzie frontend został zaimplementowany w panelu admina Django, a backend wyłącznie w Django:
+# Invoicing Application
 
----
+The Invoicing Application allows for easy handling of invoices through the Django admin panel. It is a tool designed for managing clients, products, and issuing invoices.
 
-# Aplikacja Fakturowania
+## Description
 
-Aplikacja Fakturowania umożliwia prostą obsługę faktur za pomocą panelu administracyjnego Django. Jest to narzędzie przeznaczone do zarządzania klientami, produktami oraz wystawianiem faktur.
+The application is built with Django, providing a convenient way to manage data in the admin panel. The backend handles business logic, such as generating and managing invoices, clients, and products.
 
-## Opis
+## Features
 
-Aplikacja została stworzona w Django, co pozwala na wygodne zarządzanie danymi w panelu admina. Backend obsługuje logikę biznesową, taką jak generowanie i zarządzanie fakturami, klientami oraz produktami.
+### 1. Invoice Management
 
-## Funkcjonalności
+- **Issuing Invoices**: Ability to create new invoices through the Django admin panel.
+- **Deleting Invoices**: Ability to delete existing invoices directly from the panel.
+- **Downloading Invoices**: Option to download invoices in PDF format.
 
-### 1. Zarządzanie Fakturami
+### 2. Client Management
 
-- **Wystawianie faktur**: Możliwość tworzenia nowych faktur za pomocą panelu admina Django.
-- **Usuwanie faktur**: Możliwość usuwania istniejących faktur bezpośrednio z panelu.
-- **Pobieranie faktur**: Opcja pobierania faktur w formacie PDF.
+- **Adding Clients**: Ability to add new clients to the database via the admin panel.
+- **Editing Client Data**: Ability to update existing client data.
+- **Deleting Clients**: Option to remove clients from the database.
 
-### 2. Zarządzanie Klientami
+### 3. Product Management
 
-- **Dodawanie klientów**: Możliwość dodawania nowych klientów do bazy danych za pomocą panelu admina.
-- **Edycja danych klientów**: Możliwość aktualizacji danych istniejących klientów.
-- **Usuwanie klientów**: Opcja usuwania klientów z bazy danych.
+- **Adding Products**: Ability to add new products to the database via the admin panel.
+- **Editing Product Data**: Ability to update existing product data.
+- **Deleting Products**: Option to remove products from the database.
 
-### 3. Zarządzanie Produktami
+### 4. Templates Management
+Templates allow to issue an invoice directly from templates panel.
 
-- **Dodawanie produktów**: Możliwość dodawania nowych produktów do bazy danych za pomocą panelu admina.
-- **Edycja danych produktów**: Możliwość aktualizacji danych istniejących produktów.
-- **Usuwanie produktów**: Opcja usuwania produktów z bazy danych.
+- **Adding Templates**: Ability to add new templates to the database via the admin panel.
+- **Editing Templates Data**: Ability to update existing product data.
+- **Deleting Templates**: Option to remove products from the database.
 
-## Instalacja i Uruchomienie
+## Installation and Running
 
-### Wymagania
+### Requirements
 
 - Python 3.x
 - Django
 
-### Instrukcje
+### Instructions
 
-1. **Pobranie repozytorium**:
+1. **Download the repository**:
 
    ```bash
-   git clone [https://github.com/twoj-repozytorium](https://github.com/ThaikoZ/fakturomat)
+   git clone https://github.com/ThaikoZ/fakturomat
    cd fakturomat
    ```
 
-2. **Instalacja zależności**:
+2. **Install dependencies**:
 
    ```bash
    pip install pipenv
    pipenv install
    ```
 
-3. **Uruchomienie serwera Django**:
+3. **Run the Django server**:
 
    ```bash
    python manage.py migrate
@@ -61,12 +64,12 @@ Aplikacja została stworzona w Django, co pozwala na wygodne zarządzanie danymi
    python manage.py runserver
    ```
 
-4. **Dostęp do panelu admina**:
+4. **Access the admin panel**:
 
-   - Zaloguj się do panelu admina Django, dostępnego pod adresem `http://localhost:8000/admin/`.
+   - Log in to the Django admin panel available at `http://localhost:8000/admin/`.
 
-## Uwagi
+## Notes
 
-- Upewnij się, że serwer Django jest uruchomiony, by mieć pełny dostęp do funkcji zarządzania fakturami.
-- Projekt został zrobiony na zaliczenie Inżynierii Oprogramowania
-- Dodaj autoryzację i logowanie, jeśli potrzebujesz dodatkowego zabezpieczenia dostępu do funkcji fakturowania.
+- Ensure the Django server is running to have full access to invoicing management features.
+- This project was created as part of a Software Engineering course requirement.
+- Add authentication and login if you need additional security for accessing invoicing functions.
